@@ -12,7 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('animales', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_animal');
+            $table->integer('arete')->unique();
+            $table->enum('ingreso', ['Nacimiento', 'Compra']);
+            $table->string('nombre_animal', 45);
+            $table->date('fecha');
+            $table->enum('sexo', ['Macho', 'Hembra']);
+            $table->enum('clasificacion', ['Vacas', 'Toros', 'Terneros', 'Terneras', 'Vaquillonas']);
+            $table->float('precio_compra');
+            $table->enum('estado', ['Activo', 'Muerto', 'Vendido']);
+            $table->unsignedBigInteger('raza_id')->nullable();
+            $table->foreign('raza_id')->references('id_raza')->on('razas');
             $table->timestamps();
         });
     }

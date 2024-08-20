@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('vacunas', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_vacuna');
+            $table->string('nombre_vacuna', 45);
+            $table->date('Fecha_administrada');
+            $table->date('Fecha_programada');
+            $table->unsignedBigInteger('animal_id');
+            $table->foreign('animal_id')->references('id_animal')->on('animales')->onDelete('cascade');
             $table->timestamps();
         });
     }

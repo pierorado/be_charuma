@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ventas', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_venta');
+            $table->string('nombre_propietario', 45);
+            $table->date('fecha');
+            $table->float('precio');
+            $table->unsignedBigInteger('animal_id')->nullable();
+            $table->foreign('animal_id')->references('id_animal')->on('animales')->onDelete('set null');
             $table->timestamps();
         });
     }

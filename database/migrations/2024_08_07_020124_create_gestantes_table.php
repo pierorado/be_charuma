@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('gestantes', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_gestacion');
+            $table->date('Fecha_prenez');
+            $table->date('Fecha_estimada');
+            $table->date('Fecha_parto');
+            $table->string('crias', 10);
+            $table->unsignedBigInteger('animal_id');
+            $table->foreign('animal_id')->references('id_animal')->on('animales')->onDelete('cascade');
             $table->timestamps();
         });
     }
