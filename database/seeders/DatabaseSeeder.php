@@ -25,18 +25,18 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         // Generar 4 registros de Razas
-        Raza::factory()->count(4)->create();
+        //Raza::factory()->count(4)->create();
 
         // Generar 4 registros de Animales
-        Animal::factory()->count(4)->create();
+        //Animal::factory()->count(4)->create();
 
         // Generar 4 registros de Ventas
-        Venta::factory()->count(4)->create();
+        //Venta::factory()->count(4)->create();
 
         // Generar 4 registros de Vacunas
-        Vacuna::factory()->count(4)->create();
+        //Vacuna::factory()->count(4)->create();
 
         // Generar 4 registros de Gestaciones
-        Gestante::factory()->count(4)->create();
+       // Gestante::factory()->count(4)->create();
     }
 }
