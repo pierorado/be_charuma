@@ -11,8 +11,6 @@ class Animal extends Model
 
     protected $table = 'animales';
 
-    protected $primaryKey = 'id_animal';
-
     protected $fillable = [
         'arete',
         'ingreso',

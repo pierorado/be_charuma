@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "dd35791d2f84548a8c08d0e92d474f31",
+=======
+    "content-hash": "3ee8c260a055294e56b1e89d98634ea0",
+>>>>>>> parent of 8dbe79d (modulo de animales v1)
     "packages": [
         {
             "name": "brick/math",
@@ -1121,68 +1125,6 @@
                 }
             ],
             "time": "2023-10-27T10:59:02+00:00"
-        },
-        {
-            "name": "laravel/breeze",
-            "version": "v1.29.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/breeze.git",
-                "reference": "22c53b84b7fff91b01a318d71a10dfc251e92849"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/breeze/zipball/22c53b84b7fff91b01a318d71a10dfc251e92849",
-                "reference": "22c53b84b7fff91b01a318d71a10dfc251e92849",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "^10.17",
-                "illuminate/filesystem": "^10.17",
-                "illuminate/support": "^10.17",
-                "illuminate/validation": "^10.17",
-                "php": "^8.1.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^8.0",
-                "phpstan/phpstan": "^1.10"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Breeze\\BreezeServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Breeze\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
-            "keywords": [
-                "auth",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel/breeze/issues",
-                "source": "https://github.com/laravel/breeze"
-            },
-            "time": "2024-03-04T14:35:21+00:00"
         },
         {
             "name": "laravel/framework",
@@ -6591,6 +6533,7 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "laravel-lang/actions",
             "version": "1.8.4",
             "source": {
@@ -6619,12 +6562,50 @@
                 "laravel": {
                     "providers": [
                         "LaravelLang\\Actions\\ServiceProvider"
+=======
+            "name": "laravel/breeze",
+            "version": "v1.29.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "22c53b84b7fff91b01a318d71a10dfc251e92849"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/22c53b84b7fff91b01a318d71a10dfc251e92849",
+                "reference": "22c53b84b7fff91b01a318d71a10dfc251e92849",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^10.17",
+                "illuminate/filesystem": "^10.17",
+                "illuminate/support": "^10.17",
+                "illuminate/validation": "^10.17",
+                "php": "^8.1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "phpstan/phpstan": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Breeze\\BreezeServiceProvider"
+>>>>>>> parent of 8dbe79d (modulo de animales v1)
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
+<<<<<<< HEAD
                     "LaravelLang\\Actions\\": "src/"
+=======
+                    "Laravel\\Breeze\\": "src/"
+>>>>>>> parent of 8dbe79d (modulo de animales v1)
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6633,6 +6614,7 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Andrey Helldar",
                     "email": "helldar@dragon-code.pro",
                     "homepage": "https://dragon-code.pro"
@@ -7660,6 +7642,22 @@
                 "source": "https://github.com/Laravel-Lang/routes"
             },
             "time": "2024-07-10T10:28:26+00:00"
+=======
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
+            "keywords": [
+                "auth",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
+            },
+            "time": "2024-03-04T14:35:21+00:00"
+>>>>>>> parent of 8dbe79d (modulo de animales v1)
         },
         {
             "name": "laravel/pint",
@@ -7789,50 +7787,6 @@
                 "source": "https://github.com/laravel/sail"
             },
             "time": "2024-08-02T07:45:47+00:00"
-        },
-        {
-            "name": "laraveldaily/larastarters",
-            "version": "2.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LaravelDaily/Larastarters.git",
-                "reference": "291758a4feebcb32cca62fe003166d84e2bd6134"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LaravelDaily/Larastarters/zipball/291758a4feebcb32cca62fe003166d84e2bd6134",
-                "reference": "291758a4feebcb32cca62fe003166d84e2bd6134",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "LaravelDaily\\Larastarters\\LarastartersServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "LaravelDaily\\Larastarters\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Povilas Korop",
-                    "email": "povilas@laraveldaily.com"
-                }
-            ],
-            "description": "Laravel Starter Kits with extra functions",
-            "support": {
-                "issues": "https://github.com/LaravelDaily/Larastarters/issues",
-                "source": "https://github.com/LaravelDaily/Larastarters/tree/2.3.3"
-            },
-            "time": "2024-02-19T13:00:57+00:00"
         },
         {
             "name": "mockery/mockery",
