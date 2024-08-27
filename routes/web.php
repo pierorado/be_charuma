@@ -33,6 +33,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('animales', [AnimalController::class, 'index'])->name('animales.index');
+    Route::get('animales/create', [AnimalController::class, 'create'])->name('animales.create');
+    Route::post('animales',[AnimalController::class, 'store'])->name('animales.store');
+    Route::get('animales/{animal}/show',[AnimalController::class, 'show'])->name('animales.show');
+    Route::get('animales/{id_animal}/edit',[AnimalController::class, 'edit'])->name('animales.edit');
+    Route::post('animales/{id_animal}',[AnimalController::class, 'update'])->name('animales.update');
+    Route::delete('animales/{id_animal}',[AnimalController::class, 'destroy'])->name('animales.destroy');
 });
 
 require __DIR__.'/auth.php';
