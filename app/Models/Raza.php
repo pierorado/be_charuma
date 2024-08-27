@@ -9,6 +9,7 @@ class Raza extends Model
 {
     use HasFactory;
     protected $table = 'razas';
+    protected $primaryKey = 'id_raza';
     public $timestamps = false;
     protected $fillable = [
         'nombre_raza',
