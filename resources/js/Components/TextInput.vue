@@ -1,13 +1,10 @@
-<template>
-    <input class="block w-full px-3 py-2 border rounded-r border-gray-300 form-input focus:border-indigo-600" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" ref="input">
-</template>
-
 <script setup>
 import { onMounted, ref } from 'vue';
 
-defineProps(['modelValue']);
-
-defineEmits(['update:modelValue']);
+const model = defineModel({
+    type: String,
+    required: true,
+});
 
 const input = ref(null);
 
@@ -16,4 +13,14 @@ onMounted(() => {
         input.value.focus();
     }
 });
+
+defineExpose({ focus: () => input.value.focus() });
 </script>
+
+<template>
+    <input
+        class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
+        v-model="model"
+        ref="input"
+    />
+</template>

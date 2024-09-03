@@ -1,11 +1,13 @@
 <?php
 
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
+<<<<<<< HEAD
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\GestanteController;
 use App\Http\Controllers\VacunaController;
 use App\Http\Controllers\VentaController;
+=======
+>>>>>>> 6485f541c9ecaabcd2dd0da5eb71f5c27aafb088
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -22,13 +24,12 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    /*return Inertia::render('Welcome', [
+    return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
-    ]);*/
-    return redirect('/animales');
+    ]);
 });
 
 Route::get('/dashboard', function () {
@@ -36,10 +37,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/about', fn () => Inertia::render('About'))->name('about');
-
-    Route::get('users', [UserController::class, 'index'])->name('users.index');
-
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -51,6 +48,7 @@ Route::middleware('auth')->group(function () {
     Route::get('animales/{id_animal}/edit',[AnimalController::class, 'edit'])->name('animales.edit');
     Route::post('animales/{id_animal}',[AnimalController::class, 'update'])->name('animales.update');
     Route::delete('animales/{id_animal}',[AnimalController::class, 'destroy'])->name('animales.destroy');
+<<<<<<< HEAD
 
     Route::get('gestantes', [GestanteController::class, 'index'])->name('gestantes.index');
     Route::get('gestantes/create', [GestanteController::class, 'create'])->name('gestantes.create');
@@ -75,6 +73,8 @@ Route::middleware('auth')->group(function () {
     Route::get('ventas/{id_venta}/edit',[VentaController::class, 'edit'])->name('ventas.edit');
     Route::post('ventas/{id_venta}',[VentaController::class, 'update'])->name('ventas.update');
     Route::delete('ventas/{id_venta}',[VentaController::class, 'destroy'])->name('ventas.destroy');
+=======
+>>>>>>> 6485f541c9ecaabcd2dd0da5eb71f5c27aafb088
 });
 
 require __DIR__.'/auth.php';
