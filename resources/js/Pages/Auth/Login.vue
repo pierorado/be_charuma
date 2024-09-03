@@ -18,7 +18,7 @@
             </div>
 
             <div class="mt-3">
-                <InputLabel for="password" value="Password" />
+                <InputLabel for="password" value="Contraseña" />
                 <TextInput id="password" type="password" class="mt-1 block w-full" v-model="form.password" required autocomplete="current-password" />
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
@@ -26,16 +26,16 @@
             <div class="mt-4 flex justify-between">
                 <label class="inline-flex items-center">
                     <Checkbox name="remember" v-model:checked="form.remember" />
-                    <span class="mx-2 text-sm text-gray-600">Remember me</span> </label>
+                    <span class="mx-2 text-sm text-gray-600">Recurdame</span> </label>
 
                 <Link v-if="canResetPassword" :href="route('password.request')" class="text-sm text-gray-600 underline hover:text-gray-900">
-                    Forgot your password?
+                    ¿Olvidaste tu contraseña?
                 </Link>
             </div>
 
             <div class="mt-6">
                 <PrimaryButton class="w-full" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Log in
+                    Ingresar
                 </PrimaryButton>
             </div>
         </form>

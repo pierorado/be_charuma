@@ -10,7 +10,7 @@ class Gestante extends Model
     use HasFactory;
 
     protected $table = 'gestantes';
-
+    protected $primaryKey = 'id_gestacion';
     protected $fillable = [
         'Fecha_prenez',
         'Fecha_estimada',
@@ -18,7 +18,7 @@ class Gestante extends Model
         'crias',
         'animal_id',
     ];
-    
+
     public function animal()
     {
         return $this->belongsTo(Animal::class, 'animal_id');

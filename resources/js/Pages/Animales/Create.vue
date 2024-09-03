@@ -122,7 +122,7 @@ const form = useForm({
             ingreso: 'Nacimiento',
             nombre_animal: '',
             fecha: '',
-            sexo: '',
+            sexo: 'Hembra',
             clasificacion: 'Vacas',
             precio_compra: '',
             estado: 'Activo',

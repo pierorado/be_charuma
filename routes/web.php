@@ -3,6 +3,9 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\GestanteController;
+use App\Http\Controllers\VacunaController;
+use App\Http\Controllers\VentaController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -49,7 +52,29 @@ Route::middleware('auth')->group(function () {
     Route::post('animales/{id_animal}',[AnimalController::class, 'update'])->name('animales.update');
     Route::delete('animales/{id_animal}',[AnimalController::class, 'destroy'])->name('animales.destroy');
 
+    Route::get('gestantes', [GestanteController::class, 'index'])->name('gestantes.index');
+    Route::get('gestantes/create', [GestanteController::class, 'create'])->name('gestantes.create');
+    Route::post('gestantes',[GestanteController::class, 'store'])->name('gestantes.store');
+    Route::get('gestantes/{gestante}/show',[GestanteController::class, 'show'])->name('gestantes.show');
+    Route::get('gestantes/{id_gestacion}/edit',[GestanteController::class, 'edit'])->name('gestantes.edit');
+    Route::post('gestantes/{id_gestacion}',[GestanteController::class, 'update'])->name('gestantes.update');
+    Route::delete('gestantes/{id_gestacion}',[GestanteController::class, 'destroy'])->name('gestantes.destroy');
 
+    Route::get('vacunas', [VacunaController::class, 'index'])->name('vacunas.index');
+    Route::get('vacunas/create', [VacunaController::class, 'create'])->name('vacunas.create');
+    Route::post('vacunas',[VacunaController::class, 'store'])->name('vacunas.store');
+    Route::get('vacunas/{gestante}/show',[VacunaController::class, 'show'])->name('vacunas.show');
+    Route::get('vacunas/{id_vacuna}/edit',[VacunaController::class, 'edit'])->name('vacunas.edit');
+    Route::post('vacunas/{id_vacuna}',[VacunaController::class, 'update'])->name('vacunas.update');
+    Route::delete('vacunas/{id_vacuna}',[VacunaController::class, 'destroy'])->name('vacunas.destroy');
+
+    Route::get('ventas', [VentaController::class, 'index'])->name('ventas.index');
+    Route::get('ventas/create', [VentaController::class, 'create'])->name('ventas.create');
+    Route::post('ventas',[VentaController::class, 'store'])->name('ventas.store');
+    Route::get('ventas/{venta}/show',[VentaController::class, 'show'])->name('ventas.show');
+    Route::get('ventas/{id_venta}/edit',[VentaController::class, 'edit'])->name('ventas.edit');
+    Route::post('ventas/{id_venta}',[VentaController::class, 'update'])->name('ventas.update');
+    Route::delete('ventas/{id_venta}',[VentaController::class, 'destroy'])->name('ventas.destroy');
 });
 
 require __DIR__.'/auth.php';
